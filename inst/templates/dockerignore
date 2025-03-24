@@ -1,0 +1,44 @@
+
+# R specific
+.RData
+.Rhistory
+.Rproj.user/
+*.Rproj
+renv/library/
+packrat/lib*/
+packrat/src/
+
+# Python specific
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+venv/
+ENV/
+.env
+.venv
+
+# Common
+.git
+.gitignore
+.github/
+node_modules/
+Dockerfile
+docker-compose.yml
+.dockerignore
+.DS_Store
+*.log
+

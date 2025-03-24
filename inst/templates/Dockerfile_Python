@@ -1,0 +1,26 @@
+FROM python:3.8-slim
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Shiny for Python
+RUN pip install shiny
+
+# Install additional Python dependencies
+{{DEPENDENCIES}}
+
+# Copy application files
+COPY . /app
+WORKDIR /app
+
+# Set environment variables
+{{ENV_VARS}}
+
+# Expose port
+EXPOSE {{PORT}}
+
+# Run the application
+CMD ["shiny", "run", "app.py", "--host", "0.0.0.0", "--port", "{{PORT}}"]
+
