@@ -1,60 +1,53 @@
-# r-pkg
 
-This repository houses a devcontainer that setups an R package development environment. The container is setup to work with [GitHub Codespaces](https://github.com/features/codespaces) to instantly have a cloud-based developer workflow.
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
-You can try out the Codespace by clicking on the following button:
+# shinydocker
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/coatless-devcontainer/r-pkg?quickstart=1)
+<!-- badges: start -->
 
-> [!NOTE]
->
-> Codespaces are available to Students and Teachers for free [up to 180 core hours per month](https://docs.github.com/en/education/manage-coursework-with-github-classroom/integrate-github-classroom-with-an-ide/using-github-codespaces-with-github-classroom#about-github-codespaces)
-> through [GitHub Education](https://education.github.com/). Otherwise, you will have 
-> [up to 60 core hours and 15 GB free per month](https://github.com/features/codespaces#pricing).
+<!-- badges: end -->
 
-Or, you can press the template button to create a new repository with the same setup so that you
-can work locally on the devcontainer:
+The goal of shinydocker is to …
 
-[![Use this template](https://img.shields.io/badge/Use%20this%20template-Create%20new%20repository-blue?logo=github)](https://github.com/coatless-devcontainer/r-pkg/generate)
+## Installation
 
-This will create a fork of the repository that can be worked on inside a local copy of
-[Visual Studio Code](https://code.visualstudio.com/) through the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). With the extension installed, you can open the repository in a container by pressing `F1` (to bring up command palette) and typing `Dev Container: Reopen in Container`.
+You can install the development version of shinydocker from
+[GitHub](https://github.com/) with:
 
-Lastly, you can directly obtain the underlying container image by typing in Terminal: 
-
-```sh
-docker pull ghcr.io/coatless-devcontainer/r-pkg:latest
+``` r
+# install.packages("pak")
+pak::pak("coatless-rpkg/shinydocker")
 ```
 
-## Quick start
+## Example
 
-Run the following series of commands inside of R once the container opens. Make sure to change `"name-of-package"` to your current package name.
+This is a basic example which shows you how to solve a common problem:
 
-```r
-usethis::create_package("name-of-package")
-usethis::use_package_doc()
-usethis::use_agpl3_license()
-usethis::use_testthat()
-usethis::use_github_action("check-standard")
-usethis::use_pkgdown_github_pages()
+``` r
+library(shinydocker)
+## basic example code
 ```
 
-## Resources
+What is special about using `README.Rmd` instead of just `README.md`?
+You can include R chunks like so:
 
-- [Manual: Writing R extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html)
-- [Textbook: R Packages](https://r-pkgs.org/)
-- [usethis](https://usethis.r-lib.org/)
-- [devtools](https://devtools.r-lib.org/)
+``` r
+summary(cars)
+#>      speed           dist       
+#>  Min.   : 4.0   Min.   :  2.00  
+#>  1st Qu.:12.0   1st Qu.: 26.00  
+#>  Median :15.0   Median : 36.00  
+#>  Mean   :15.4   Mean   : 42.98  
+#>  3rd Qu.:19.0   3rd Qu.: 56.00  
+#>  Max.   :25.0   Max.   :120.00
+```
 
-## Developer notes
+You’ll still need to render `README.Rmd` regularly, to keep `README.md`
+up-to-date. `devtools::build_readme()` is handy for this.
 
-This repository uses a pre-built container strategy to have GitHub Actions build and, then, store the devcontainer in [GitHub's Container Repository](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry). 
+You can also embed plots, for example:
 
-We place the main logic of the devcontainer in [`.github/.devcontainer/devcontainer.json`](https://github.com/coatless-devcontainer/r-pkg/blob/main/.github/.devcontainer/devcontainer.json). From there, we use [`.github/workflows/pre-build-devcontainer.yml`](https://github.com/coatless-devcontainer/r-pkg/blob/main/.github/workflows/pre-build-devcontainer.yml) to build and publish the devcontainer onto GitHub's Container repository for the organization. Then, the repository's [`.devcontainer/devcontainer.json`](https://github.com/coatless-devcontainer/r-pkg/blob/main/.devcontainer/devcontainer.json) pulls the pre-built image.
+<img src="man/figures/README-pressure-1.png" width="100%" />
 
-> [!IMPORTANT]
->
-> Make sure to specify the permissions as stated in the GitHub Actions workflow linked above
-> and for organizations please make sure to have the organization's container registry enabled.
-> 
-> For more information, see [GitHub's Container Registry documentation](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry).
+In that case, don’t forget to commit and push the resulting figure
+files, so they display on GitHub and CRAN.
