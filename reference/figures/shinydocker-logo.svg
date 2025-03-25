@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 400 400">
+  <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
+  <defs>
+    <style>
+      .st0, .st1 {
+        fill: #394d54;
+      }
+
+      .st1 {
+        font-family: Arial-BoldMT, Arial;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .st1, .st2, .st3, .st4, .st5, .st6 {
+        isolation: isolate;
+      }
+
+      .st2 {
+        fill: #17b5eb;
+      }
+
+      .st2, .st5 {
+        opacity: .8;
+      }
+
+      .st7 {
+        fill: #1e2b3c;
+        stroke: #0f1824;
+        stroke-width: 8px;
+      }
+
+      .st8 {
+        fill: url(#linear-gradient);
+      }
+
+      .st4 {
+        fill: #0db7ed;
+        opacity: .6;
+      }
+
+      .st9, .st6 {
+        fill: #fff;
+      }
+
+      .st5 {
+        stroke: #394d54;
+        stroke-width: .8px;
+      }
+
+      .st10 {
+        fill: #00acd3;
+      }
+
+      .st11 {
+        fill: #20c2ef;
+      }
+
+      .st6 {
+        opacity: .2;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-193.2" y1="1.4" x2="-192.2" y2="2.4" gradientTransform="translate(50316 -402) scale(260 320)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5e6ad2"/>
+      <stop offset=".5" stop-color="#7986cb"/>
+      <stop offset="1" stop-color="#3f51b5"/>
+    </linearGradient>
+  </defs>
+  <polygon class="st7" points="200 20 350 110 350 290 200 380 50 290 50 110 200 20"/>
+  <polygon class="st8" points="200 40 330 120 330 280 200 360 70 280 70 120 200 40"/>
+  <circle class="st6" cx="144.4" cy="130" r="35"/>
+  <circle class="st6" cx="124.4" cy="110" r="20"/>
+  <rect class="st0" x="100" y="245" width="200" height="15" rx="2" ry="2"/>
+  <path class="st2" d="M70,280c20-10,40,5,60-5s40,5,60-5,40,5,60-5,40,5,60-5,20,20,20,20l-130,80-130-80Z"/>
+  <path class="st4" d="M70,280c25-5,50,10,75,0s50,10,75-5,50,5,75-5,35,10,35,10l-130,80-130-80Z"/>
+  <g>
+    <g>
+      <rect class="st10" x="97.5" y="173.6" width="30" height="30" rx="2" ry="2"/>
+      <rect class="st9" x="98.5" y="174.6" width="28" height="28" rx="1" ry="1"/>
+      <path class="st5" d="M105,174.6v7M112.5,174.6v7M120,174.6v7"/>
+      <g class="st3">
+        <text class="st1" transform="translate(107.1 193.6)"><tspan x="0" y="0">S</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st11" x="132.5" y="173.6" width="30" height="30" rx="2" ry="2"/>
+      <rect class="st9" x="133.5" y="174.6" width="28" height="28" rx="1" ry="1"/>
+      <path class="st5" d="M140,174.6v7M147.5,174.6v7M155,174.6v7"/>
+      <g class="st3">
+        <text class="st1" transform="translate(141.7 193.6)"><tspan x="0" y="0">H</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st10" x="167.5" y="173.6" width="30" height="30" rx="2" ry="2"/>
+      <rect class="st9" x="168.5" y="174.6" width="28" height="28" rx="1" ry="1"/>
+      <path class="st5" d="M175,174.6v7M182.5,174.6v7M190,174.6v7"/>
+      <g class="st3">
+        <text class="st1" transform="translate(180.2 193.6)"><tspan x="0" y="0">I</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st11" x="202.5" y="173.6" width="30" height="30" rx="2" ry="2"/>
+      <rect class="st9" x="203.5" y="174.6" width="28" height="28" rx="1" ry="1"/>
+      <path class="st5" d="M210,174.6v7M217.5,174.6v7M225,174.6v7"/>
+      <g class="st3">
+        <text class="st1" transform="translate(211.7 193.6)"><tspan x="0" y="0">N</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st10" x="237.5" y="173.6" width="30" height="30" rx="2" ry="2"/>
+      <rect class="st9" x="238.5" y="174.6" width="28" height="28" rx="1" ry="1"/>
+      <path class="st5" d="M245,174.6v7M252.5,174.6v7M260,174.6v7"/>
+      <g class="st3">
+        <text class="st1" transform="translate(247.1 193.6)"><tspan x="0" y="0">Y</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st10" x="97.5" y="208.6" width="30" height="30" rx="2" ry="2"/>
+      <rect class="st9" x="98.5" y="209.6" width="28" height="28" rx="1" ry="1"/>
+      <path class="st5" d="M105,209.6v7M112.5,209.6v7M120,209.6v7"/>
+      <g class="st3">
+        <text class="st1" transform="translate(106.7 228.6)"><tspan x="0" y="0">D</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st11" x="132.5" y="208.6" width="30" height="30" rx="2" ry="2"/>
+      <rect class="st9" x="133.5" y="209.6" width="28" height="28" rx="1" ry="1"/>
+      <path class="st5" d="M140,209.6v7M147.5,209.6v7M155,209.6v7"/>
+      <g class="st3">
+        <text class="st1" transform="translate(141.2 228.6)"><tspan x="0" y="0">O</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st10" x="167.5" y="208.6" width="30" height="30" rx="2" ry="2"/>
+      <rect class="st9" x="168.5" y="209.6" width="28" height="28" rx="1" ry="1"/>
+      <path class="st5" d="M175,209.6v7M182.5,209.6v7M190,209.6v7"/>
+      <g class="st3">
+        <text class="st1" transform="translate(176.7 228.6)"><tspan x="0" y="0">C</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st11" x="202.5" y="208.6" width="30" height="30" rx="2" ry="2"/>
+      <rect class="st9" x="203.5" y="209.6" width="28" height="28" rx="1" ry="1"/>
+      <path class="st5" d="M210,209.6v7M217.5,209.6v7M225,209.6v7"/>
+      <g class="st3">
+        <text class="st1" transform="translate(211.7 228.6)"><tspan x="0" y="0">K</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st10" x="237.5" y="208.6" width="30" height="30" rx="2" ry="2"/>
+      <rect class="st9" x="238.5" y="209.6" width="28" height="28" rx="1" ry="1"/>
+      <path class="st5" d="M245,209.6v7M252.5,209.6v7M260,209.6v7"/>
+      <g class="st3">
+        <text class="st1" transform="translate(247.1 228.6)"><tspan x="0" y="0">E</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st11" x="272.5" y="208.6" width="30" height="30" rx="2" ry="2"/>
+      <rect class="st9" x="273.5" y="209.6" width="28" height="28" rx="1" ry="1"/>
+      <path class="st5" d="M280,209.6v7M287.5,209.6v7M295,209.6v7"/>
+      <g class="st3">
+        <text class="st1" transform="translate(281.7 228.6)"><tspan x="0" y="0">R</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
