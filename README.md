@@ -1,53 +1,121 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# shinydocker
+> \[!IMPORTANT\]
+>
+> This package is currently in the prototype/experimental stage. It is
+> not yet available on CRAN and may have bugs or limitations.
+
+# shinydocker <img src="man/figures/shinydocker-animated-logo.svg" align="right" height="139" />
 
 <!-- badges: start -->
 
+[![R-CMD-check](https://github.com/coatless-rpkg/shinydocker/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/coatless-rpkg/shinydocker/actions/workflows/R-CMD-check.yaml)
+![Prototype](https://img.shields.io/badge/Status-Prototype-orange)
+![Experimental](https://img.shields.io/badge/Status-Experimental-blue)
 <!-- badges: end -->
 
-The goal of shinydocker is to …
+`shinydocker` is an R package that streamlines the process of
+containerizing Shiny applications, supporting both R and Python Shiny
+apps.
 
 ## Installation
 
-You can install the development version of shinydocker from
-[GitHub](https://github.com/) with:
+You can install the development version of `shinydocker` from GitHub
+with:
 
 ``` r
-# install.packages("pak")
-pak::pak("coatless-rpkg/shinydocker")
+# install.packages("remotes")
+remotes::install_github("coatless-rpkg/shinydocker")
 ```
 
-## Example
+You will also need to have Docker installed on your system. You can
+download Docker from the [official
+website](https://www.docker.com/products/docker-desktop). You do not
+need to log in to Docker to use `shinydocker`.
 
-This is a basic example which shows you how to solve a common problem:
+## Using shinydocker
+
+The package provides a set of functions to automate the process, as well
+as options for advanced configuration.
+
+### Exporting a Shiny App to Docker
+
+The `export()` function allows you to convert a Shiny application into a
+docker containerized application.
+
+``` r
+# Automated export: configures, builds, and optionally runs the container
+export("path/to/your/shinyapp", run = TRUE)
+```
+
+For example, to convert the “Hello World” Shiny app from the `{shiny}`
+package into a standalone Electron app:
+
+``` r
+# Copy "Hello World" from `{shiny}`
+system.file("examples", "01_hello", package="shiny") |>
+    fs::dir_copy("myapp", overwrite = TRUE)
+
+shinydocker::export("myapp", run = TRUE)
+```
+
+### Manually Dockerizing a Shiny App
 
 ``` r
 library(shinydocker)
-## basic example code
+
+# Path to your Shiny app
+shiny_app_path <- "path/to/your/shinyapp"
+
+# Create Docker configuration for a Shiny app
+dockerize(shiny_app_path)
+
+# Build a Docker image
+build_image(shiny_app_path)
+
+# Run the container
+run_container(shiny_app_path)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+### Diagnostic Tools
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+# Check Docker environment
+sitrep_docker()
+
+# Analyze app containerization readiness
+sitrep_app_conversion("path/to/your/shinyapp")
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
+## Advanced Configuration
 
-You can also embed plots, for example:
+### Custom Dockerfile
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
+``` r
+# Use a custom Dockerfile template
+dockerize("path/to/your/shinyapp", 
+          custom_dockerfile = "path/to/custom/Dockerfile")
+```
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+### Environment Variables
+
+``` r
+# Set environment variables during containerization
+dockerize("path/to/your/shinyapp", 
+          env_vars = c(API_KEY = "your-secret-key"))
+```
+
+## Cleanup and Management
+
+``` r
+# Stop a specific container
+stop_containers("path/to/your/shinyapp")
+
+# Clean up Docker containers and images
+cleanup_containers(remove_images = TRUE)
+```
+
+## License
+
+AGPL (\>= 3)
