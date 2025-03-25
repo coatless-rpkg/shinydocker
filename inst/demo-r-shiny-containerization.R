@@ -1,5 +1,6 @@
-# Create a simple Shiny app
-app_dir <- tempdir()
+# Create a simple R Shiny app
+app_dir <- tempfile()
+dir.create(app_dir)
 writeLines(
   'library(shiny)
    
@@ -27,7 +28,7 @@ writeLines(
 )
 
 # Export the app
-shinydocker::export(app_dir, run = TRUE, detached = TRUE)
+shinydocker::export(app_dir, run = TRUE, detach = TRUE)
 
 ## Alternatively, steps can be run separately ----
 

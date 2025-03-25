@@ -1,5 +1,6 @@
 # Create a simple Shiny for Python app
-app_dir <- tempdir()
+app_dir <- tempfile()
+dir.create(app_dir)
 writeLines(
   'from shiny import App, ui, render
 import numpy as np
@@ -29,7 +30,7 @@ file.path(app_dir, "app.py")
 )
 
 # Export the app
-shinydocker::export(app_dir, run = TRUE, detached = TRUE)
+shinydocker::export(app_dir, run = TRUE, detach = TRUE)
 
 # Stop the container
 stop_container(app_dir)
@@ -43,4 +44,4 @@ shinydocker::run_container(app_dir, detach = TRUE)
 # Build Docker image
 # shinydocker::build_image(app_dir)
 # Run the containerized app
-# shinydocker::run_container(app_dir, detached = TRUE)
+# shinydocker::run_container(app_dir, detach = TRUE)
