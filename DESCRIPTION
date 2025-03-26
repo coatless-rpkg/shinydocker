@@ -15,6 +15,7 @@ URL: https://r-pkg.thecoatlessprofessor.com/shinydocker/, https://github.com/coa
 BugReports: https://github.com/coatless-rpkg/shinydocker/issues
 License: AGPL (>= 3)
 SystemRequirements: Docker (>= 28.0.0)
+Depends: R (>= 4.4)
 Imports: 
     yaml,
     processx,
