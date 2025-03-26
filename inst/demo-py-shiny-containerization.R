@@ -1,39 +1,20 @@
-# Create a simple Shiny for Python app
+# Quick demo of containerizing a simple Shiny for Python app
+
+## Setup a temporary directory that gets destructed after the session ----
 app_dir <- tempfile()
 dir.create(app_dir)
+
+## Create a simple Shiny for Python app from a template ----
 writeLines(
-  'from shiny import App, ui, render
-import numpy as np
-import matplotlib.pyplot as plt
-
-app_ui = ui.page_fluid(
-    ui.panel_title("Hello Docker"),
-    ui.layout_sidebar(
-        ui.sidebar(
-            ui.input_slider("obs", "Number of observations:", min=1, max=1000, value=500)
-        ),
-        ui.output_plot("distPlot")
-    )
+  readLines(system.file("examples", "shiny", "python", "hello-docker-plain", "app.py", package = "shinydocker")),
+  file.path(app_dir, "app.py")
 )
 
-def server(input, output, session):
-    @output
-    @render.plot
-    def distPlot():
-        data = np.random.normal(size=input.obs())
-        fig, ax = plt.subplots()
-        ax.hist(data)
-        return fig
-
-app = App(app_ui, server)',
-file.path(app_dir, "app.py")
-)
-
-# Export the app
+## Export the app ----
 shinydocker::export(app_dir, run = TRUE, detach = TRUE)
 
 # Stop the container
-stop_container(app_dir)
+shinydocker::stop_container(app_dir)
 
 # Restart the container:
 shinydocker::run_container(app_dir, detach = TRUE)

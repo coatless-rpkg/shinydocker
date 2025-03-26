@@ -1,42 +1,26 @@
-# Create a simple R Shiny app
+# Quick demo of containerizing a simple R Shiny app
+
+## Create a simple R Shiny app ----
 app_dir <- tempfile()
 dir.create(app_dir)
 writeLines(
-  'library(shiny)
-   
-   ui <- fluidPage(
-     titlePanel("Hello Docker"),
-     sidebarLayout(
-       sidebarPanel(
-         sliderInput("obs", "Number of observations:", 
-                     min = 1, max = 1000, value = 500)
-       ),
-       mainPanel(
-         plotOutput("distPlot")
-       )
-     )
-   )
-   
-   server <- function(input, output) {
-     output$distPlot <- renderPlot({
-       hist(rnorm(input$obs))
-     })
-   }
-   
-   shinyApp(ui = ui, server = server)',
+  readLines(system.file("examples", "shiny", "r", "hello-docker-ggplot2", "app.R", package = "shinydocker")),
   file.path(app_dir, "app.R")
 )
 
-# Export the app
-shinydocker::export(app_dir, run = TRUE, detach = TRUE)
+## Export the app  ----
+container <- shinydocker::export(app_dir, run = TRUE, detach = TRUE)
 
-## Alternatively, steps can be run separately ----
+## Stop the container ----
+shinydocker::stop_container()
 
-# Create Docker configuration
+# Alternatively, steps can be run separately ----
+
+## Create Docker configuration ----
 dockerize(app_dir)
 
-# Build Docker image
+## Build Docker image ----
 build_image(app_dir)
 
-# Run the containerized app
+## Run the containerized app ----
 run_container(app_dir, detach = TRUE)
