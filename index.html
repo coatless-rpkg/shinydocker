@@ -224,13 +224,13 @@
 </h3>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Remove containers for a specific app</span></span>
-<span><span class="fu">shinydocker</span><span class="fu">::</span><span class="fu">cleanup_containers</span><span class="op">(</span><span class="st">"path/to/your/shinyapp"</span><span class="op">)</span></span>
+<span><span class="fu">shinydocker</span><span class="fu">::</span><span class="fu"><a href="reference/cleanup_container.html">cleanup_container</a></span><span class="op">(</span><span class="st">"path/to/your/shinyapp"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Remove all shinydocker containers and images</span></span>
-<span><span class="fu">shinydocker</span><span class="fu">::</span><span class="fu">cleanup_containers</span><span class="op">(</span>remove_images <span class="op">=</span> <span class="cn">TRUE</span>, force <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="fu">shinydocker</span><span class="fu">::</span><span class="fu"><a href="reference/cleanup_container.html">cleanup_container</a></span><span class="op">(</span>remove_images <span class="op">=</span> <span class="cn">TRUE</span>, force <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Clean up and run docker system prune</span></span>
-<span><span class="fu">shinydocker</span><span class="fu">::</span><span class="fu">cleanup_containers</span><span class="op">(</span>prune <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">shinydocker</span><span class="fu">::</span><span class="fu"><a href="reference/cleanup_container.html">cleanup_container</a></span><span class="op">(</span>prune <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
 <div class="section level2">
