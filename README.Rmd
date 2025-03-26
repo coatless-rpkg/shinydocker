@@ -229,13 +229,13 @@ shinydocker::stop_container()
 #| label: cleanup
 #| eval: false
 # Remove containers for a specific app
-shinydocker::cleanup_containers("path/to/your/shinyapp")
+shinydocker::cleanup_container("path/to/your/shinyapp")
 
 # Remove all shinydocker containers and images
-shinydocker::cleanup_containers(remove_images = TRUE, force = TRUE)
+shinydocker::cleanup_container(remove_images = TRUE, force = TRUE)
 
 # Clean up and run docker system prune
-shinydocker::cleanup_containers(prune = TRUE)
+shinydocker::cleanup_container(prune = TRUE)
 ```
 
 
