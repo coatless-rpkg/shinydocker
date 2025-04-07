@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# shinydocker <a href="https://r-pkgs.thecoatlessprofessor.com/shinydocker/"><img src="man/figures/shinydocker-animated-logo.svg" align="right" height="138" alt="hex logo for shinydocker" /></a>
+# shinydocker <a href="https://r-pkgs.thecoatlessprofessor.com/shinydocker/"><img src="man/figures/shinydocker-animated-logo.svg" align="right" width="138" alt="hex logo for shinydocker" /></a>
 
 <!-- badges: start -->
 
